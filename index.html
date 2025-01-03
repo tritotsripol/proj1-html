@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Elements of HTML</title>
+</head>
+
+<body>
+  <blockquote><h1>Basic Elements of HTML</h1></blockquote>
+  <blockquote>Structure: &lt;(Element) (Attribute)="..."&gt;Text&lt;/(Element)&gt;</blockquote>
+  <blockquote><h3>Contents</h3></blockquote>
+  <ul>
+    <li><a href="#font styles">Font Styles</a></li>
+    <li><a href="#section">Section</a></li>
+    <li><a href="#list">List</a></li>
+    <li><a href="#anchor">Anchor</a></li>
+    <li><a href="#document fragment">Document Fragment</a></li>
+    <li><a href="#image and iframe">Image and Iframe</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#form">Form</a></li>
+    <li><a href="#input type">Input Type</a></li>
+    <li><a href="#options">Options</a></li>
+    </ul>
+  <!-- document fracment tester -->
+  <div id="the top">the top of the website</div>
+  <hr>
+  <table border="1">
+    <!-- Font Styles -->
+    <blockquote><h1 id="font styles">Font Styles</h1></blockquote>
+    <thead>
+      <tr>
+        <th><b>Elements</b></th>
+        <th><b>Example Output</b></th>
+        <th><b>Elements</b></th>
+        <th><b>Example Output</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Text 1-->
+      <tr>
+        <td colspan="4"><b>Text 1</b></td>
+      </tr>
+      <tr>
+        <td>&lt;b&gt;</td>
+        <td><b>Bold</b></td>
+        <td>&lt;strong&gt;</td>
+        <td><strong>Strong</strong></td>
+      </tr>
+      <tr>
+        <td>&lt;i&gt;</td>
+        <td><i>Italic</i></td>
+        <td>&lt;em&gt;</td>
+        <td><em>Emphasis</em></td>
+      </tr>
+      <tr>
+        <td>&lt;u&gt;</td>
+        <td><u>Underline</u></td>
+        <td>&lt;ins&gt;</td>
+        <td><ins>Insert Text</ins></td>
+      </tr>
+      <tr>
+        <td>&lt;s&gt;</td>
+        <td><s>Strikethrough</s></td>
+        <td>&lt;del&gt;</td>
+        <td><del>Delete Text</del></td>
+      </tr>
+      <!-- Text 2 -->
+      <tr>
+        <td colspan="4"><b>Text 2</b></td>
+      </tr>
+      <tr>
+        <td>&lt;sup&gt;</td>
+        <td><sup>Superscript</sup></td>
+        <td>&lt;sub&gt;</td>
+        <td><sub>Subscript</sub></td>
+      </tr>
+      <tr>
+        <td>&lt;abbr title="(Full form)"&gt;</td>
+        <td><abbr title="(Full form)">(Abbreviation)</abbr></td>
+      </tr>
+      <tr>
+        <td>&lt;code&gt;</td>
+        <td><code>Code</code></td>
+        <td>&lt;kbd&gt;</td>
+        <td><kbd>Keyboard Input</kbd></td>
+      </tr>
+      <tr>
+        <td>&lt;samp&gt;</td>
+        <td><samp>Sample Text</samp></td>
+        <td>&lt;var&gt;</td>
+        <td><var>Variable</var></td>
+      </tr>
+      <!-- Quote -->
+      <tr>
+        <td colspan="4"><b>Quote </b></td>
+      </tr>
+      <tr>
+        <td>&lt;q&gt;</td>
+        <td><q>Quote</q></td>
+        <td>&lt;blockquote&gt;</td>
+        <td><blockquote>Block quote</blockquote></td>
+      </tr>
+      <tr>
+        <td>&lt;cite&gt;</td>
+        <td><cite>Citation</cite></td>
+        <td>&lt;address&gt;</td>
+        <td><address>Address</address></td>
+      </tr>
+    </tbody>
+  </table>
+<hr>
+  <!-- Section -->
+<blockquote><h1 id="section">Section</h1></blockquote>
+  <ul>
+    <li><h2>Headings<h2></li>
+      <ul>
+        <li><h1>&lt;h1&gt;   Heading 1</h1></li>
+        <li><h2>&lt;h2&gt;   Heading 2</h2></li>
+        <li><h3>&lt;h3&gt;   Heading 3</h3></li>
+        <li><h4>&lt;h4&gt;   Heading 4</h4></li>
+        <li><h5>&lt;h5&gt;   Heading 5</h5></li>
+        <li><h6>&lt;h6&gt;   Heading 6</h6></li>
+      </ul>
+    <li><h2>Paragraphs &lt;p&gt;<h2></li>
+    <li><h2>Division &lt;div&gt;<h2></li>
+    <li><h2>Horizontal Rule &lt;hr&gt;<h2></li>
+    <li><h2>Line break &lt;br&gt;<h2></li>
+  </ul>
+<hr>
+  <!-- List -->
+<blockquote><h1 id="list">List   &lt;li&gt;</h1></blockquote>
+<table border="1">
+  <thead>
+    <tr>
+      <th>&lt;ul&gt; Unordered List</th>
+      <th colspan="4">&lt;ol&gt; Ordered List</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>Item 1</li>
+            <ul>
+              <li>Item 1.1</li>
+                <ul>
+                  <li>Item 1.1.1</li>
+                </ul>
+              <li>Item 1.2</li>
+              <li>Item 1.3</li>
+            </ul>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </td>
+      <td>
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </td>
+      <td>
+        &lt;start="4"&gt;
+        <ol start="4">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </td>
+      <td>
+        &lt;start="A"&gt;
+        <ol type="A">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </td>
+      <td>
+        &lt;start="I"&gt;
+        <ol type="I">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </td>
+    </tr>
+  </thead>
+</table>
+<hr>
+<!-- Anchor -->
+<blockquote><h1 id="anchor">Anchor   &lt;a href="(URL Link)"&gt;</h1></blockquote>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b>Example Input</b></td>
+      <td>&lt;a href="https://www.google.com"&gt;www.google.com&lt;/a&gt;</td>
+    </tr>
+    <tr>
+      <td><b>Example Output</b></td>
+      <td><a href="https://www.google.com">www.google.com</a></td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<!-- Document Fragment -->
+<blockquote><h1 id="document fragment">Document Fragment</h1></blockquote>
+<h2>Document Title &lt;(Font styles) id="(Document link)"&gt</h2>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b>Example Input</b></td>
+      <td>&lt;div id="the top"&gt;the top of the website&lt;/div&gt;</td>
+    </tr>
+    <tr>
+      <td><b>Example Output</b></td>
+      <td>^^(On the top of the website)^^</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Document Link &lt;a href="#(Document link)"&gt;</h2>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b>Example Input</b></td>
+      <td>&lt;a href="#the top"&gt;the top&lt;/a&gt;</td>
+    </tr>
+    <tr>
+      <td><b>Example Output</b></td>
+      <td><a href="#the top">the top</a></td>
+  </tbody>
+</table>
+<hr>
+<blockquote><h1 id="image and iframe">Image and Iframe</h1></blockquote>
+<!-- Image -->
+<h2>Image<h2>
+<h3>&lt;img src="images/(File name)" width="(width)" height="(height)" alt="(name)"&gt</h3>
+<ul>
+  <li>
+    <b>Example Input:</b>
+    <br>&lt;img src="images/chicken.jpg" width="200" height="200" alt="Chicken"&gt;
+    <br>&lt;img src="images/duck.jpg" width="200" height="200" alt="Duck"&gt;
+    <br>&lt;img src="images/goose.jpg" width="200" height="200" alt="Goose"&gt;
+  </li>
+  <li><b>Example Output:</b></li>
+  <img src="images/chicken.jpg" width="200" height="200" alt="Chicken">
+  <img src="images/duck.jpg" width="200" height="200" alt="Duck">
+  <img src="images/goose.jpg" width="200" height="200" alt="Goose">
+</ul>
+<!-- Iframe -->
+<h2>Iframe</h2>
+<h3>&lt;iframe src="Source" width="(width%)"&gt;</h3>
+<ul>
+  <li>
+    <b>Example Input: </b>
+    <br>&lt;iframe src="https://www.example.com" width="75%"&gt;
+  </li>
+  <li><b>Example Output: </b></li>
+  <iframe src="https://www.example.com" width="50%"></iframe>
+</ul>
+<hr>
+<!-- table -->
+<blockquote><h1 id="table">Table</h1></blockquote>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Element</th>
+      <th>Meaning</th>
+      <th>Element</th>
+      <th>Meaning</th>
+    </tr>
+    <tr>
+      <td>&lt;table&gt;</td>
+      <td>Whole table</td>
+      <td>&lt;tr&gt;</td>
+      <td>Table row(horizontal)</td>
+    </tr>
+    <tr>
+      <td>&lt;tbody&gt;</td>
+      <td>Table body</td>
+      <td>&lt;td&gt;</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>&lt;th&gt;</td>
+      <td>Table head cell</td>
+    </tr>
+    <tr>
+      <td>rowspan="(Scale)"</td>
+      <td>Span row(vertical)</td>
+      <td>colspan="(Scale)"</td>
+      <td>Span column(horizontal)</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<!-- form -->
+<blockquote><h1 id="form">Form &lt;form&gt;,&lt;section&gt;,&lt;button&gt;</blockquote></h1>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Structure</th>
+      <th>Example Input</th>
+      <th>Example Output</th>
+    </tr>
+    <tr>
+      <td>
+        &lt;form action="(Sign up link)" method="(get or post)"&gt;
+          <br>&lt;section&gt;
+            <br>&lt;label for="(Variable)"&gt;(Title):&lt;/label&gt;
+            <br>&lt;input
+              <br>id="(Variable)"
+              <br>name="(Name)"
+              <br>type="text"
+              <br>placeholder="(Placeholder)"
+            <br>required/&gt;
+          <br>&lt;/section&gt;
+        <br>&lt;/form&gt;
+      </td>
+      <td>
+        &lt;form action="fake_signup_link" method="post"&gt;
+          <br>&lt;section&gt;
+            <br>&lt;label for="name"&gt;Name:&lt;/label&gt;
+            <br>&lt;input
+              <br>id="name"
+              <br>name="name"
+              <br>type="text"
+              <br>placeholder="Your name"
+            <br>required/&gt;
+          <br>&lt;/section&gt;
+        <br>&lt;/form&gt;
+      </td>
+      <td>
+        <form action="fake_signup_link" method="post">
+          <section>
+            <label for="name">Name:</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+            required/>
+          </section>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &lt;section&gt;
+          <br>&lt;input id="(Variable)" type="checkbox" required/&gt;
+          <br>&lt;label for="(Variable)"&gt;(Text)&lt;/label&gt;
+        <br>&lt;/section&gt;
+      </td>
+      <td>
+        &lt;section&gt;
+          <br>&lt;input id="confirm" type="checkbox" required/&gt;
+          <br>&lt;label for="confirm"&gt;Confirm your name&lt;/label&gt;
+        <br>&lt;/section&gt;
+      </td>
+      <td>
+      <section>
+        <input id="confirm" type="checkbox" required/>
+        <label for="confirm">Confirm your name</label>
+      </section>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &lt;button&gt;(Text)&lt;/button&gt;
+      </td>
+      <td>
+        &lt;button&gt;Sign in&lt;/button&gt;
+      </td>
+      <td>
+        <button>Sign in</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<!-- Input type -->
+<blockquote><h1 id="input type">Input Type</h1></blockquote>
+<b>&lt;label for="(Variable)"&gt;(Title):&lt;/label&gt;
+    <br>&lt;input type="(Variable)" id="(Variable)" name="(Name)" &gt;</b><br><br>
+    <b>Example Output:</b><br>
+    <li>
+      <label for="text">"text"</label>
+      <input type="text" id="text" name="text">
+    </li>
+    <li>
+      <label for="password">"password"</label>
+      <input type="password" id="password" name="password">
+    </li>
+    <li>
+      <label for="email">"email"</label>
+      <input type="email" id="email" name="email">
+    </li>
+    <li>
+      <label for="url">"url"</label>
+      <input type="url" id="url" name="url">
+    </li>
+    <li>
+      <label for="tel">"tel"</label>
+      <input type="tel" id="tel" name="tel">
+    </li>
+    <li>
+      <label for="search">"search"</label>
+      <input type="search" id="search" name="search">
+    </li>
+    <li>
+      <label for="color">"color"</label>
+      <input type="color" id="color" name="color">
+    </li>
+    <li>
+      <label for="number">"number"</label>
+      <input type="number" id="number" name="number">
+    </li>
+    <li>
+      <label for="range">"range"</label>
+      <input type="range" id="range" name="range">
+    </li>
+    <li>
+      <label for="date">"date"</label>
+      <input type="date" id="date" name="date">
+    </li>
+    <li>
+      <label for="month">"month"</label>
+      <input type="month" id="month" name="month">
+    </li>
+    <li>
+      <label for="week">"week"</label>
+      <input type="week" id="week" name="week">
+    </li>
+    <li>
+      <label for="time">"time"</label>
+      <input type="time" id="time" name="time">
+    </li>
+    <li>
+      <label for="datetime-local">"datetime-local"</label>
+      <input type="datetime-local" id="datetime-local" name="datetime-local">
+    </li>
+    <li>
+      <label for="datetime">"datetime"</label>
+      <input type="datetime" id="datetime" name="datetime">
+    </li>
+    <li>
+      <label for="file">"file"</label>
+      <input type="file" id="file" name="file">
+    </li>
+    <li>
+      <label for="hidden">"hidden"</label>
+      <input type="hidden" id="hidden" name="hidden">
+    </li>
+    <br>
+    <table border="1">
+      <tbody>
+        <tr>
+          <th><b>Other Attributes</b></th>
+          <th><b>Meaning</b></th>
+        </tr>
+        <tr>
+          <td>value="(Variable)"</td>
+          <td>Set (Variable) to default</td>
+        </tr>
+        <tr>
+          <td>min="(Variable)"</td>
+          <td>Set (Variable) to minimum</td>
+        </tr>
+        <tr>
+          <td>max="(Variable)"</td>
+          <td>Set (Variable) to maximum</td>
+        </tr>
+        <tr>
+          <td>step="(Variable)"</td>
+          <td>Adjust in (Variable) steps</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table border="1">
+      <h3>Type of Min or Max to Date Variables</h3>
+      <tr>
+        <th>Date Variables</th>
+        <th>Min or Max</th>
+      </tr>
+      <tr>
+        <td>date</td>
+        <td>YYYY-MM-DD</td>
+      </tr>
+      <tr>
+        <td>month</td>
+        <td>YYYY-MM</td>
+      </tr>
+      <tr>
+        <td>week</td>
+        <td>YYYY-WW</td>
+      </tr>
+      <tr>
+        <td>time</td>
+        <td>HH:MM:SS</td>
+      </tr>
+      <tr>
+        <td>datetime</td>
+        <td>YYYY-MM-DDTHH:MM:SS</td>
+      </tr>
+      <tr>
+        <td>datetime-local</td>
+        <td>YYYY-MM-DDTHH:MM:SS</td>
+      </tr>
+    </table><br>
+    <table border="1">
+      <tbody>
+        <h3>"comments"</h3>
+        <tr>
+          <th><b>Structure</b></th>
+          <td>
+            &lt;label for="(Variable)"&gt;(Title)&lt;/label&gt;<br>
+            &lt;textarea id="(Variable)" name="(Name)" rows="(row)" cols="(column)"&gt;&lt;/textarea&gt;
+          </td>
+        </tr>
+        <tr>
+          <th><b>Example Input</b></th>
+          <td>
+            &lt;label for="comments"&gt;Comment box&lt;/label&gt;<br>
+            &lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;
+          </td>
+        </tr>
+        <tr>
+          <th><b>Example Output</b></th>
+          <td>
+            <label for="comments">Comment box</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+          </td>
+      </tbody>
+    </table>
+<hr>
+<!-- options -->
+<blockquote><h1 id="options">Options</h1></blockquote>
+<h4>&lt;input type="(checkbox or radio)" id="option(no.)" name="option" /&gt;<br>
+  &lt;label for="option(no.)"&gt;(Text)&lt;/label&gt;<br>...(depends on the number of options)<br></h4>
+<table border="1">
+  <tbody>
+    <tr>
+      <th><b></b></th>
+      <th><b>Multiple option: "checkbox"</b></th>
+      <th><b>Single option: "radio"</b></th>
+    </tr>
+    <tr>
+      <th><b>Example Output</b></th>
+      <td>
+        <input type="checkbox" id="option1" name="option" />
+        <label for="option1">option 1</label>
+        <input type="checkbox" id="option2" name="option" />
+        <label for="option2">option 2</label>
+        <input type="checkbox" id="option3" name="option" />
+        <label for="option3">option 3</label>
+      </td>
+      <td>
+        <input type="radio" id="option1" name="option" />
+        <label for="option1">option 1</label>
+        <input type="radio" id="option2" name="option" />
+        <label for="option2">option 2</label>
+        <input type="radio" id="option3" name="option" />
+        <label for="option3">option 3</label> 
+      </td>
+    </tr>
+    <tr>
+      <th><b>Set to defult</b></th>
+      <td>&lt;input type="checkbox" id="option(no.)" name="option" <b>checked</b>/&gt;</td>
+      <td>&lt;input type="checkbox" id="option(no.)" name="option" <b>value="(Variable)"</b>/&gt;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h4>&lt;select id="option" name="option"&gt;<br>
+  &lt;option value="option(no.)"&gt;(Text)&lt;/option&gt;<br>
+  ...(depends on the number of options)<br>
+&lt;/select&gt;</h4>
+or<br>
+<h4>&lt;select id="option" name="option"&gt;<br>
+  &lt;optgroup label="(Group name)"&gt;<br>
+    &lt;option value="option(no.)"&gt;(Text)&lt;/option&gt;<br>
+    ...(depends on the number of options)<br>
+  &lt;/optgroup&gt;<br>
+    ...(depends on the number of optgroups)<br>
+&lt;/select&gt;</h4>
+<table border="1">
+  <tbody>
+    <tr>
+      <th></th>
+      <th><b>Select box: &lt;option&gt;</b></th>
+      <th><b>Select box(group): &lt;optgroup&gt;</b></th>
+    </tr>
+    <tr>
+      <th><b>Example Output</b></th>
+      <td>
+        <select id="option" name="option">
+          <option value="option1">option 1</option>
+          <option value="option2">option 2</option>
+          <option value="option3">option 3</option>
+        </select>
+      </td>
+      <td>
+        <select id="option" name="option">
+          <optgroup label="group1">
+            <option value="option1">option 1</option>
+            <option value="option2">option 2</option>
+          </optgroup>
+          <optgroup label="group2">
+            <option value="option3">option 3</option>
+            <option value="option4">option 4</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th><b>Set to defult</b></th>
+      <td>&lt;option value="(Variable)" <b>selected</b>&gt;(Text)&lt;/option&gt;</td>
+      <td>&lt;option value="(Variable)" <b>selected</b>&gt;(Text)&lt;/option&gt;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
