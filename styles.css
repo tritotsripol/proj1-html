@@ -19,15 +19,21 @@
   display: flex;
   text-align: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+.contents > div > a {
+  text-decoration: none;
+  color:rgb(80, 50, 255);
   cursor: pointer;
   transition: 0.5s;
 }
-.contents :hover {
-  color: rgb(30,20,90);
-  font-weight: bold;
+.contents > div > a:hover {
+  color: rgb(15, 0, 150);
+  font-weight: bold; 
   font-size: large;
-  transform: scale(1.1);
 }
+
 .dft {
   font-size: medium;
   text-align: left;
@@ -118,4 +124,27 @@
 .white-block:hover {  
   transform: scale(1.01);  
   box-shadow: 10px 10px 10px rgba(10, 0, 60, 0.5);
+}
+
+.column {
+  column-count:2;
+  column-gap: 1em;
+}
+
+/* view on phone */
+@media (max-width: 768px) {
+  .title-box {
+    column-count: 1;
+    column-width: auto;
+  }
+
+  .contents-box {
+    column-count: 1;
+    column-width: auto;
+  }
+
+  .column {
+    column-count: 1;
+    column-width: auto;
+  }
 }
