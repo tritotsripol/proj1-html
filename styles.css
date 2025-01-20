@@ -182,7 +182,7 @@ h1 {
   .column {
     column-count: 2;
     column-width: auto;
-    flex-wrap: wrap;
+    column-height: 100%;
   }
 }
 
