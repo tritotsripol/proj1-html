@@ -180,4 +180,8 @@ h1 {
   .content-box {
     overflow-y: auto;
   }
+  .table {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 }
