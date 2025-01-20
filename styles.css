@@ -167,7 +167,8 @@ h1 {
     column-count: 2;
     column-width: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
     overflow: hidden;
     height: 100%;
   }
@@ -176,12 +177,6 @@ h1 {
     max-width: 50%;
     box-sizing: border-box;
   }
-
-  .content-box {
-    overflow-y: auto;
-  }
   .table {
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-}
+    flex: 1; 
+    overflow-y: auto;}}
