@@ -134,7 +134,7 @@ h1 {
 }
 
 /* view on phone */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .title-box {
     column-count: 1;
     column-width: auto;
