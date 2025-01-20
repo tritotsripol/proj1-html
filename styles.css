@@ -167,9 +167,12 @@ h1 {
     column-count: 2;
     column-width: auto;
   }
-  .indigo-block .table {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  .indigo-block {
+    overflow: auto;
+  }
+  .indigo-block > .table {
+    height: auto;
+    min-height: 100%;
+    overflow-y: scroll;
   }
 }
