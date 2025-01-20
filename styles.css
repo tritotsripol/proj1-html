@@ -147,13 +147,13 @@ h1 {
 }
 
 /* view on ipad */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1366px) {
   .title-box, .content-box {
     column-count: 1;
     column-width: auto;
   }
   .column {
-    column-count: 1;
+    column-count: 2;
     column-width: auto;
   }
 }
