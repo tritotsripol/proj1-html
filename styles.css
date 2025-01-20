@@ -1,5 +1,6 @@
 h1 {
-  font-size: 36px; }
+  font-size: 36px;
+}
 .title-box {
   text-align: center;
   color: white;
@@ -112,7 +113,8 @@ h1 {
   justify-content: space-around;
 }
 .table-l > div { 
-  padding-right: 1em;
+  padding: 1em;
+  grid-template-columns: auto auto;
 }
 .bb-blue {
   border-bottom: solid 1px rgb(80, 50, 255);
@@ -135,33 +137,22 @@ h1 {
 
 /* view on phone */
 @media (max-width: 767px) {
-  .title-box {
+  .title-box, .content-box {
     column-count: 1;
     column-width: auto;
   }
-
-  .contents-box {
-    column-count: 1;
-    column-width: auto;
-  }
-
   .column {
     column-count: 1;
     column-width: auto;
   }
 }
 
+/* view on ipad */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .title-box {
+  .title-box, .content-box {
     column-count: 1;
     column-width: auto;
   }
-
-  .contents-box {
-    column-count: 1;
-    column-width: auto;
-  }
-
   .column {
     column-count: 1;
     column-width: auto;
@@ -169,20 +160,12 @@ h1 {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .title-box {
+  .title-box, .content-box {
     column-count: 1;
     column-width: auto;
   }
-
-  .contents-box {
-    column-count: 1;
-    column-width: auto;
-  }
-
   .column {
     column-count: 2;
     column-width: auto;
-    column-height: 100%;
   }
 }
-
