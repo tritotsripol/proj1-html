@@ -160,15 +160,13 @@ h1 {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .title-box, .content-box {
-    column-count: 1;
-    column-width: auto;
+    display: flex;
+    flex-direction: column;
   }
   .column {
-    column-count: 2;
-    column-width: auto;
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
+    flex-direction: row; /* เปลี่ยนให้เป็นแถวถ้าต้องการให้เป็นแนวนอน */
     overflow: hidden;
     height: 100%;
   }
@@ -179,4 +177,6 @@ h1 {
   }
   .table {
     flex: 1; 
-    overflow-y: auto;}}
+    overflow-y: auto;
+  }
+}
