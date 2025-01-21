@@ -169,8 +169,6 @@ h1 {
   }
   .column .indigo-block .table {
     break-inside: avoid;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
