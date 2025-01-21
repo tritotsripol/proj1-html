@@ -171,5 +171,12 @@ h1 {
     break-inside: avoid;
     width: 100%;
     max-width: 100%;
+    margin-bottom: 1em;
+  }
+  .column .white-block .table {
+    break-inside: avoid;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
   }
 }
