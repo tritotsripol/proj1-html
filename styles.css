@@ -167,4 +167,9 @@ h1 {
     column-count: 2;
     column-width: auto;
   }
+  .column .indigo-block .table {
+    break-inside: avoid;
+    width: 100%;
+    max-width: 100%;
+  }
 }
