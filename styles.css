@@ -170,7 +170,4 @@ h1 {
     break-inside: avoid;
     margin-bottom: 1em;
   }
-  * {
-    box-sizing: border-box;
-  }
 }
