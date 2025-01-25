@@ -146,7 +146,7 @@ h1 {
 }
 
 /* view on ipad */
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .title-box, .content-box {
     column-count: 1;
     column-width: auto;
@@ -157,17 +157,3 @@ h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
-  .title-box, .content-box {
-    column-count: 1;
-    column-width: auto;
-  }
-  .column {
-    column-count: 2;
-    column-width: auto;
-  }
-  .column .indigo-block .table {
-    break-inside: avoid;
-    margin-bottom: 1em;
-  }
-}
