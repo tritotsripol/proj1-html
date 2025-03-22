@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basic Elements of HTML</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
-  <meta property="og:image" content="https://github.com/tritotsripol/proj1-html/raw/main/favicon.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" id="prism-theme">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" id="prism-light-theme" disabled>
+  <meta property="og:image" content="favicon.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="https://github.com/tritotsripol/proj1-html/raw/main/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <style>
     .Kanit {
       font-family: 'Kanit', sans-serif;
@@ -17,7 +18,6 @@
     }
     pre {
       border-radius: 10px;
-      background-color: #1f1f1f !important;
       width: max-content;
       padding: 5px !important;
       display: inline;
@@ -43,7 +43,7 @@
   </div>
 </section>
 <section class="contents-box">
-  <h2 style="text-align: center; color:#535c91" data-en="Contents" data-th="เนื้อหา"></h2>
+  <h2 style="text-align: center;" data-en="Contents" data-th="เนื้อหา"></h2>
   <div class="contents">
     <div><a href="#font styles">Font Styles</a></div>
     <div><a href="#section">Section</a></div>
@@ -699,6 +699,13 @@
     </select>
   </div>
 
+    <!-- light theme -->
+    <div>
+      <button class="themebtn" id="theme-toggle">
+        <img class="themeicon" id="theme-icon" src="moon-icon.png" alt="Theme Icon" width="25" height="25">
+      </button>
+    </div>
+
     <!-- ฺgo to top btn -->
     <div>
       <button class="gotop">
@@ -706,7 +713,7 @@
       </button>
     </div>
 
-<section>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="script.js"></script>
