@@ -309,14 +309,7 @@ select.sectionbtn option {
     column-count: 1;
     column-width: auto;
   }
-  h1 {font-size: 8vw;}
-  h2 {font-size: 7vw;}
-  h3 {font-size: 6vw;}
-  h4 {font-size: 5vw;}
-  h5 {font-size: 4vw;}
-  h6 {font-size: 3.5vw;}
 }
-
 /* view on ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
   .title-box,
