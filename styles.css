@@ -3,8 +3,63 @@ h1 {
   margin-top: 25px;
   margin-bottom:25px;
 }
+.header {
+  display:flex;
+  flex-wrap: nowrap;
+  background: #00000080;
+  height: max-content;
+  color: white;
+  padding: 2em;
+  justify-content: start;
+  align-items: center;
+  gap: 2.5em;
+}
+.home {
+  flex-grow: 1;
+  text-align:end;
+}
+.home > a{
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: font-weight 0.5s ease, font-size 0.5s ease;
+}
+.home > a > button {
+  cursor: pointer;
+  color: white;
+  background: #00000080;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 5em;
+  font-size: 20px;
+  font-family: Kanit;
+  transition: background 1s ease, box-shadow 1s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.home > a > button:hover {
+  background: black;
+  box-shadow: 0 0 5px rgba(0,0,0, 1);
+}
+.footer {
+  background: #00000080;
+  height: max-content;
+  color: white;
+  padding: 1.5em;
+  text-align:start;
+  width: 100%;
+  position: relative;
+  bottom : 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-top:auto;
+  z-index: -1;
+}
 .web {
-  margin:25px; background-color: #070F2B ;
+  margin:25px;
+}
+body {
+  background-color: #070F2B ;
+  margin: 0;
 }
 .title-box {
   text-align: center;
@@ -177,7 +232,7 @@ h1 {
   flex-wrap: nowrap;
   gap: 5px;
   position: fixed;
-  inset: auto 25px 25px auto;
+  inset: auto 15px 15px auto;
 }
 /* buttons */
 
@@ -309,7 +364,14 @@ select.sectionbtn option {
     column-count: 1;
     column-width: auto;
   }
+  h1 {font-size: 8vw;}
+  h2 {font-size: 7vw;}
+  h3 {font-size: 6vw;}
+  h4 {font-size: 5vw;}
+  h5 {font-size: 4vw;}
+  h6 {font-size: 3.5vw;}
 }
+
 /* view on ipad */
 @media (min-width: 768px) and (max-width: 1024px) {
   .title-box,
@@ -325,7 +387,7 @@ select.sectionbtn option {
 /* darkth */
 
 /* lightth */
-.web.light {
+body.light {
   background-color: #d8d6ff;
 }
 body.light .title-box {
@@ -410,5 +472,26 @@ body.light select.sectionbtn div {
 body.light select.sectionbtn option {
   color: black;
   background-color:white;
+}
+
+body.light .header, body.light .footer {
+  background: #ffffff80;
+  color: #13364e;
+}
+body.light .home>a {
+  color: #13364e;
+}
+body.light .home > a{
+  color: #13364e;
+}
+body.light .home > a > button {
+  color: #13364e;
+  background: #ffffff80;
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+body.light .home > a > button:hover {
+  background: white;
+  box-shadow: 0 0 5px rgba(255,255,255, 1);
 }
 /* lightth */
