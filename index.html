@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Elements of HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" id="prism-theme">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" id="prism-light-theme" disabled>
+  <meta property="og:image" content="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    .Kanit {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 400;
+    }
+    pre {
+      border-radius: 10px;
+      width: max-content;
+      padding: 5px !important;
+      display: inline;
+    }
+    .codebr pre {
+      display: block;
+      padding: 5px !important;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body class="Kanit bodys">
+  <section class="header">
+    <div><img src="favicon.png" width="75px" height="75px" alt="favicon"></div>
+    <div><h1 style="font-size: 50px; line-height: 1em">Trithod Site</h1></div>
+    <div class="home"><a href="https://tritotsripol.github.io/trithodhome/"><button data-en="Home" data-th="หน้าหลัก"></button></a></div>
+  </section>
+
+
+  <section class="web">
+  <section class="title-box">
+  <!-- document fracment tester -->
+  <div class="dft" id="the top">the top of the website</div>
+  <h1 style="font-size: 50px;" data-en="Basic Elements of HTML" data-th="องค์ประกอบ HTML พื้นฐาน"></h1>
+  <div style="display: flex; flex-wrap: wrap; justify-content:center; gap: 10px">
+    <div data-en="Structure:" data-th="โครงสร้าง:"></div>
+    <div class="struc"><pre><code class="language-html">&lt;(Element) (Attribute)="..."&gt;Text&lt;/(Element)&gt;</code></pre></div>
+  </div>
+</section>
+<section class="contents-box">
+  <h2 style="text-align: center;" data-en="Contents" data-th="เนื้อหา"></h2>
+  <div class="contents">
+    <div><a href="#font styles">Font Styles</a></div>
+    <div><a href="#section">Section</a></div>
+    <div><a href="#list">List</a></div>
+    <div><a href="#anchor">Anchor</a></div>
+    <div><a href="#document fragment">Document Fragment</a></div>
+    <div><a href="#image and iframe">Image and Iframe</a></div>
+    <div><a href="#table">Table</a></div>
+    <div><a href="#form">Form</a></div>
+    <div><a href="#input type">Input Type</a></div>
+    <div><a href="#options">Options</a></div>
+  </div>
+</section>
+
+<div class="column">
+    <!-- Font Styles -->
+  <section>
+    <div class="indigo-block">
+      <h1 id="font styles">Font Styles</h1>
+    <div class="table";
+    style="grid-template-columns: repeat(4,15em);
+    grid-template-rows: repeat(4, auto);">
+          <div class="bb"><b>Elements</b></div>
+          <div class="bb"><b data-en="Example Output" data-th="ตัวอย่างเอาท์พุท"></b></div>
+          <div class="bb"><b>Elements</b></div>
+          <div class="bb"><b data-en="Example Output" data-th="ตัวอย่างเอาท์พุท"></b></div>
+
+        <!-- Text 1-->
+          <div><pre><code class="language-html">&lt;b&gt;</code></pre></div>
+          <div><b data-en="Bold" data-th="ตัวหนา">Bold</b></div>
+          <div><pre><code class="language-html">&lt;strong&gt;</code></pre></div>
+          <div><strong data-en="Strong" data-th="ตัวหนา">Strong</strong></div>
+        
+        
+          <div><pre><code class="language-html">&lt;i&gt;</code></pre></div>
+          <div><i data-en="Italic" data-th="ตัวเอียง">Italic</i></div>
+          <div><pre><code class="language-html">&lt;em&gt;</code></pre></div>
+          <div><em data-en="Emphasis" data-th="ตัวเอียง">Emphasis</em></div>
+        
+        
+          <div><pre><code class="language-html">&lt;u&gt;</code></pre></div>
+          <div><u data-en="Underline" data-th="ขีดเส้นใต้">Underline</u></div>
+          <div><pre><code class="language-html">&lt;ins&gt;</code></pre></div>
+          <div><ins data-en="Insert Text" data-th="ขีดเส้นใต้">Insert Text</ins></div>
+    
+        
+          <div class="bb"><pre><code class="language-html">&lt;s&gt;</code></pre></div>
+          <div class="bb"><s data-en="Strikethrough" data-th="ขีดฆ่า">Strikethrough</s></div>
+          <div class="bb"><pre><code class="language-html">&lt;del&gt;</code></pre></div>
+          <div class="bb"><del data-en="Delete Text" data-th="ขีดฆ่า">Delete Text</del></div>
+        
+        <!-- Text 2 -->
+          <div><pre><code class="language-html">&lt;sup&gt;</code></pre></div>
+          <div><sup data-en="Superscript" data-th="ตัวยกกำลัง">Superscript</sup></div>
+          <div><pre><code class="language-html">&lt;sub&gt;</code></pre></div>
+          <div><sub data-en="Subscript" data-th="ตัวห้อย">Subscript</sub></div>
+        
+        
+          <div><pre><code class="language-html">&lt;abbr title="Full form"&gt;</code></pre></div>
+          <div><abbr id="abb" title="Full form" data-en="Abbreviation" data-th="คำย่อ"></abbr></div>
+          <div></div>
+          <div></div>
+        
+          <div><pre><code class="language-html">&lt;code&gt;</code></pre></div>
+          <div><code data-en="Code" data-th="โค้ด">Code</code></div>
+          <div><pre><code class="language-html">&lt;kbd&gt;</code></pre></div>
+          <div><kbd data-en="Keyboard Input" data-th="อินพุทจากคีย์บอร์ด"></kbd></div>
+        
+        
+          <div class="bb"><pre><code class="language-html">&lt;samp&gt;</code></pre></div>
+          <div class="bb"><samp data-en="Sample Text" data-th="ตัวอย่างข้อความ"></samp></div>
+          <div class="bb"><pre><code class="language-html">&lt;var&gt;</code></pre></div>
+          <div class="bb"><var data-en="Variable" data-th="ตัวแปร"></var></div>
+        
+        <!-- Quote -->
+          <div><pre><code class="language-html">&lt;q&gt;</code></pre></div>
+          <div><q data-en="Quote" data-th="คำพูด">Quote</q></div>
+          <div><pre><code class="language-html">&lt;blockquote&gt;</code></pre></div>
+          <div><blockquote data-en="Block quote" data-th="บล็อกคําพูด">Block quote</blockquote></div>
+        
+        
+          <div><pre><code class="language-html">&lt;cite&gt;</code></pre></div>
+          <div><cite data-en="Citation" data-th="อ้างอิง">Citation</cite></div>
+          <div><pre><code class="language-html">&lt;address&gt;</code></pre></div>
+          <div><address data-en="Address" data-th="ที่อยู่">Address</address></div>
+    </div>
+    </div> 
+  </section>
+    <!-- Section -->
+  <section>
+    <div class="white-block" style="overflow-x: auto">
+    <h1 id="section">Section</h1>
+      <ul>
+        <li><h2 data-en="Headings" data-th="หัวข้อ">Headings<h2></li>
+          <ul overflow-x="auto">
+            <li><h1><pre><code class="language-html">&lt;h1&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 1" data-th="หัวข้อ 1">Heading 1</div></h1></li>
+            <li><h2><pre><code class="language-html">&lt;h2&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 2" data-th="หัวข้อ 2">Heading 2</div></h2></li>
+            <li><h3><pre><code class="language-html">&lt;h3&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 3" data-th="หัวข้อ 3">Heading 3</div></h3></li>
+            <li><h4><pre><code class="language-html">&lt;h4&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 4" data-th="หัวข้อ 4">Heading 4</div></h4></li>
+            <li><h5><pre><code class="language-html">&lt;h5&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 5" data-th="หัวข้อ 5">Heading 5</div></h5></li>
+            <li><h6><pre><code class="language-html">&lt;h6&gt;</code></pre>   &nbsp;&nbsp;&nbsp;<div style="display: inline" data-en="Heading 6" data-th="หัวข้อ 6">Heading 6</div></h6></li>
+          </ul>
+        <div style="line-height: 2.5em">
+          <li><div style="display: inline" data-en="Paragraphs" data-th="ย่อหน้า">Paragraphs</div> <div style="display: inline">&nbsp;&nbsp;&nbsp;<pre><code class="language-html">&lt;p&gt;</code></pre></div></li>
+          <li><div style="display: inline" data-en="Division" data-th="การแบ่งส่วน">Division</div> <div style="display: inline">&nbsp;&nbsp;&nbsp;<pre><code class="language-html">&lt;div&gt;</code></pre></div></li>
+          <li><div style="display: inline" data-en="Horizontal Rule" data-th="เส้นคั่น">Horizontal Rule</div> <div style="display: inline">&nbsp;&nbsp;&nbsp;<pre><code class="language-html">&lt;hr&gt;</code></pre></div></li>
+          <li><div style="display: inline" data-en="Line Break" data-th="ขึ้นบรรทัดใหม่">Line break</div> <div style="display: inline">&nbsp;&nbsp;&nbsp;<pre><code class="language-html">&lt;br&gt;</code></pre></div></li>
+        </div>
+        </ul>
+    </div>
+  </section>
+    <!-- List -->
+  <section>
+    <div class="indigo-block">
+      <h1 id="list" style="display: inline-block">List</h1> &nbsp;&nbsp;&nbsp;
+      <h2 style="display: inline-block">
+        <pre><code class="language-html">&lt;ul&gt;</code></pre>
+        ,
+        <pre><code class="language-html">&lt;ol&gt;</code></pre>
+        ,
+        <pre><code class="language-html">&lt;li&gt;</code></pre>
+      </h2>
+      <div class="table-l">
+        <div class="rb" style="text-align: center; white-space: nowrap"><pre><code class="language-html">&lt;ul&gt;</code></pre>&nbsp;&nbsp;&nbsp;<b data-en="Unordered List" data-th="รายการไม่มีลำดับ"></b></div>
+        <div style="text-align: center; grid-column: 2 / 6"><pre><code class="language-html">&lt;ol&gt;</code></pre>&nbsp;&nbsp;&nbsp;<b data-en="Ordered List" data-th="รายการมีลำดับ">Ordered List</b></div>
+        <div class="rb">
+          <ul style="white-space: nowrap">
+            <li data-en="Item 1" data-th="รายการที่ 1">Item 1</li>
+            <ul>
+              <li data-en="Item 1.1" data-th="รายการที่ 1.1">Item 1.1</li>
+              <ul>
+                <li data-en="Item 1.1.1" data-th="รายการที่ 1.1.1">Item 1.1.1</li>
+              </ul>
+              <li data-en="Item 1.2" data-th="รายการที่ 1.2">Item 1.2</li>
+              <li data-en="Item 1.3" data-th="รายการที่ 1.3">Item 1.3</li>
+            </ul>
+            <li data-en="Item 2" data-th="รายการที่ 2">Item 2</li>
+            <li data-en="Item 3" data-th="รายการที่ 3">Item 3</li>
+          </ul>
+        </div>
+        <div class="rb" style="white-space: nowrap">
+          <ol>
+            <li data-en="Item 1" data-th="รายการที่ 1">Item 1</li>
+            <li data-en="Item 2" data-th="รายการที่ 2">Item 2</li>
+            <li data-en="Item 3" data-th="รายการที่ 3">Item 3</li>
+          </ol>
+        </div>
+        <div class="rb" style="white-space: nowrap;">
+          <pre><code class="language-html" style="justify-content: center">start="4"</code></pre>
+          <ol start="4">
+            <li data-en="Item 1" data-th="รายการที่ 1">Item 1</li>
+            <li data-en="Item 2" data-th="รายการที่ 2">Item 2</li>
+            <li data-en="Item 3" data-th="รายการที่ 3">Item 3</li>
+          </ol>
+        </div>
+        <div class="rb" style="white-space: nowrap;">
+          <pre><code class="language-html" style="justify-content: center"></code>type="A"</code></pre>
+          <ol type="A">
+            <li data-en="Item 1" data-th="รายการที่ 1">Item 1</li>
+            <li data-en="Item 2" data-th="รายการที่ 2">Item 2</li>
+            <li data-en="Item 3" data-th="รายการที่ 3">Item 3</li>
+          </ol>
+        </div>
+        <div style="white-space: nowrap;">
+          <pre><code class="language-html" style="justify-content: center"></code>type="I"</code></pre>
+          <ol type="I">
+            <li data-en="Item 1" data-th="รายการที่ 1">Item 1</li>
+            <li data-en="Item 2" data-th="รายการที่ 2">Item 2</li>
+            <li data-en="Item 3" data-th="รายการที่ 3">Item 3</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Anchor -->
+  <section>
+    <div class="white-block">
+      <div style="white-space: nowrap">
+        <h1 id="anchor" style="display: inline-block;">Anchor</h1> &nbsp;&nbsp;&nbsp;
+        <h2 style="display: inline-block"><pre><code class="language-html">&lt;a href="(URL Link)"&gt;</code></pre></h2>
+      </div>
+      <div class="gridio">
+          <div><b data-en="Example Input:" data-th="ตัวอย่างอินพุท:">Example Input:</b></div>
+          <div><pre><code class="language-html">&lt;a href="https://www.google.com"&gt;www.google.com&lt;/a&gt;</code></pre></div>
+          <div><b data-en="Example Output:" data-th="ตัวอย่างเอาต์พุท:">Example Output:</b></div>
+          <div><a style="color: rgb(30,20,90)" href="https://www.google.com">www.google.com</a></div>
+      </div>
+    </div>
+  </section>
+    <!-- Document Fragment -->
+  <section>
+    <div class="indigo-block">
+    <h1 id="document fragment">Document Fragment</h1>
+    <div class="whino">
+      <div><h2 data-en="Document Title" data-th="หัวข้อเอกสาร"></h2></div> &nbsp;&nbsp;&nbsp;
+      <div><h3><pre><code class="language-html">&lt;(Font styles) id="(Part link)"&gt</code></pre></h3></div>
+    </div>
+      <div class="gridio">
+          <div><b data-en="Example Input:" data-th="ตัวอย่างอินพุท:"></b></div>
+          <div><pre><code class="language-html">&lt;div id="the top"&gt;the top of the website&lt;/div&gt;</code></pre></div>
+          <div><b data-en="Example Output:" data-th="ตัวอย่างเอาต์พุท:">:</b></div>
+          <div data-en="^^(On the top of the website)^^" data-th="^^(บนสุดของเว็บไซต์)^^"></div>
+      </div><br>
+    <div class="whino">
+      <div><h2 data-en="Part Link" data-th="ลิงค์นำทาง"></h2></div> &nbsp;&nbsp;&nbsp;
+      <div><h3><pre><code class="language-html">&lt;a href="#(Part link)"&gt;</code></pre></h3></div>
+    </div>
+    <div class="gridio">
+      <div><b data-en="Example Input:" data-th="ตัวอย่างอินพุท:"></b></div>
+      <div><pre><code class="language-html">&lt;a href="#the top"&gt;the top&lt;/a&gt;</code></pre></div>
+      <div><b data-en="Example Output:" data-th="ตัวอย่างเอาต์พุท:"></b></div>
+      <div><a style="color: #d8d6ff" href="#the top">the top</a></div>
+    </div>
+    </div>
+  </section>
+
+    <!-- Image -->
+    <div class="white-block" style="white-space: nowrap">
+    <h1 id="image and iframe">Image and Iframe</h1>
+    <h2>Image</h2>
+    <h3><pre><code class="language-html">&lt;img src="images/(File name)" width="(width)" height="(height)" alt="(name)"&gt</code></pre></h3>
+    <ul>
+      <li>
+        <b data-en="Example Input:" data-th="ตัวอย่างอินพุท:"></b>
+        <div class="codebr"><pre><code class="language-html">&lt;img src="images/chicken.jpg" width="200" height="200" alt="Chicken"&gt;
+&lt;img src="images/duck.jpg" width="200" height="200" alt="Duck"&gt;
+&lt;img src="images/goose.jpg" width="200" height="200" alt="Goose"&gt;</code></pre></div>
+      </li>
+      <li><b data-en="Example Output:" data-th="ตัวอย่างเอาต์พุท:"></b></li>
+      <img src="https://raw.githubusercontent.com/tritotsripol/proj1-html/main/chicken.jpg" width="200" height="200" alt="Chicken">
+      <img src="https://raw.githubusercontent.com/tritotsripol/proj1-html/main/duck.jpg" width="200" height="200" alt="Duck">
+      <img src="https://raw.githubusercontent.com/tritotsripol/proj1-html/main/goose.jpg" width="200" height="200" alt="Goose">
+    </ul>
+    <!-- Iframe -->
+    <h2>Iframe</h2>
+    <h3><pre><code class="language-html">&lt;iframe src="(Source)" width="(width)" height="(height)"&gt;</code></pre></h3>
+    <ul>
+      <li>
+        <b data-en="Example Input:" data-th="ตัวอย่างอินพุท:"></b>
+        <pre style="display: block"><code class="language-html">&lt;iframe src="https://www.example.com" width="100%" height="100%"&gt;</code></pre>
+      </li>
+      <li><b data-en="Example Output:" data-th="ตัวอย่างเอาต์พุท:"></b></li>
+      <iframe src="https://www.example.com" width="100%" height="100%"></iframe>
+    </ul>
+    </div>
+
+    <!-- table -->
+  <section style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <div class="indigo-block">
+    <h1 id="table">Table</h1>
+    <div class="table"
+    style="grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(4, 15em)">
+      
+          <div class="bb"><b>Element</b></div>
+          <div class="bb"><b data-en="Meaning" data-th="ความหมาย"></b></div>
+          <div class="bb"><b>Element</b></div>
+          <div class="bb"><b data-en="Meaning" data-th="ความหมาย"></b></div>
+
+          <div><pre><code class="language-html">&lt;table&gt;</code></pre></div>
+          <div data-en="Whole table" data-th="ทั้งตาราง">Whole table</div>
+          <div><pre><code class="language-html">&lt;tr&gt;</code></pre></div>
+          <div data-en="Table row(horizontal)" data-th="แถวแนวนอน">Table row(horizontal)</div>
+
+          <div><pre><code class="language-html">&lt;tbody&gt;</code></pre></div>
+          <div data-en="Table body" data-th="ตัวตาราง">Table body</div>
+          <div><pre><code class="language-html">&lt;td&gt;</code></pre></div>
+          <div data-en="Table cell" data-th="ช่องเซลล์">Table cell</div>
+
+          <div><pre><code class="language-html">&lt;th&gt;</code></pre></div>
+          <div data-en="Table head cell" data-th="ช่องเซลล์หัวข้อ">Table head cell</div>
+          <div></div>
+          <div></div>
+
+          <div><pre><code class="language-html">rowspan="(Scale)"</code></pre></div>
+          <div data-en="Span row(vertical)" data-th="ขยายแถวแนวตั้ง">Span row(vertical)</div>
+          <div><pre><code class="language-html"></code>colspan="(Scale)"</code></pre></div>
+          <div data-en="Span column(horizontal)" data-th="ขยายแถวแนวนอน">Span column(horizontal)</div>
+    </div>
+    </div>
+  </section>
+    <!-- form -->
+  <section>
+    <div class="white-block">
+    <h1 id="form" style="display: inline">Form</h1> &nbsp;&nbsp;&nbsp;
+    <h2 style="display: inline">
+      <pre><code class="language-html">&lt;form&gt;</code></pre>,
+      <pre><code class="language-html">&lt;section&gt;</code></pre>,
+      <pre><code class="language-html">&lt;button&gt;</code></pre>
+    </h2>
+    <div class="table"
+    style="grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(4, auto);">
+
+          <div class="bb-blue"><b data-en="Structure" data-th="โครงสร้าง">Structure</b></div>
+          <div class="bb-blue"><b data-en="Example Input" data-th="ตัวอย่างอินพุท">Example Input</b></div>
+          <div class="bb-blue"><b data-en="Example Output" data-th="ตัวอย่างเอาท์พุท">Example Output</b></div>
+
+    <div class="bbc"><div class="bb-blue, codebr"><pre><code class="language-html">&lt;form action="(Sign up link)" method="(get or post)"&gt;
+    <br>&lt;section&gt;
+      <br>&lt;label for="(Variable)"&gt;(Title):&lt;/label&gt;
+        <br>&lt;input
+          <br>id="(Variable)"
+          <br>name="(Variable)"
+          <br>type="text"
+          <br>placeholder="(Placeholder)"
+        <br>required/&gt;
+    <br>&lt;/section&gt;
+  <br>&lt;/form&gt;</code></pre>
+    </div></div>
+    
+    <div class="bbc"><div class="bb-blue, codebr"><pre><code class="language-html">&lt;form action="fake_signup_link" method="post"&gt;
+    <br>&lt;section&gt;
+      <br>&lt;label for="name"&gt;Name:&lt;/label&gt;
+        <br>&lt;input
+          <br>id="name"
+          <br>name="name"
+          <br>type="text"
+          <br>placeholder="Your name"
+        <br>required/&gt;
+    <br>&lt;/section&gt;
+  <br>&lt;/form&gt;</code></pre>
+    </div></div>
+
+    <div class="bb-blue">
+            <form action="fake_signup_link" method="post">
+              <section>
+                <label for="name">Name:</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                required/>
+              </section>
+            </form>
+    </div>
+
+    <div class="bbc"><div class="bb-blue, codebr"><pre><code class="language-html">&lt;section&gt;
+    <br>&lt;input id="(Variable)" type="checkbox" required/&gt;
+    <br>&lt;label for="(Variable)"&gt;(Text)&lt;/label&gt;
+  <br>&lt;/section&gt;</code></pre>
+    </div></div>
+
+    <div class="bbc"><div class="bb-blue, codebr"><pre><code class="language-html">&lt;section&gt;
+    <br>&lt;input id="confirm" type="checkbox" required/&gt;
+    <br>&lt;label for="confirm"&gt;Confirm your name&lt;/label&gt;
+  <br>&lt;/section&gt;</code></pre>
+    </div></div>
+
+    <div class="bb-blue">
+          <section>
+            <input id="confirm" type="checkbox" required/>
+            <label for="confirm">Confirm your name</label>
+          </section>
+    </div>
+    <div>
+            <pre><code class="language-html">&lt;button&gt;(Text)&lt;/button&gt;</code></pre>
+    </div>
+    <div>
+            <pre><code class="language-html">&lt;button&gt;Sign in&lt;/button&gt;</code></pre>
+    </div><div>
+            <button>Sign in</button>
+    </div></div></div>
+  </section>
+    <!-- Input type -->
+  <section>
+    <div class="indigo-block">
+    <h1 id="input type">Input Type</h1>
+    <section class="codebr"><h3><pre><code class="language-html">&lt;label for="(Variable)"&gt;(Title):&lt;/label&gt;
+&lt;input type="(Variable)" id="(Variable)" name="(Variable)"&gt;</b></code></pre></h3>
+        <br><b data-en="Example Output" data-th="ตัวอย่างเอาท์พุท">Example Output:</b><br>
+        <li>
+          <label for="text">"text"</label>
+          <input type="text" id="text" name="text">
+        </li>
+        <li>
+          <label for="password">"password"</label>
+          <input type="password" id="password" name="password">
+        </li>
+        <li>
+          <label for="email">"email"</label>
+          <input type="email" id="email" name="email">
+        </li>
+        <li>
+          <label for="url">"url"</label>
+          <input type="url" id="url" name="url">
+        </li>
+        <li>
+          <label for="tel">"tel"</label>
+          <input type="tel" id="tel" name="tel">
+        </li>
+        <li>
+          <label for="search">"search"</label>
+          <input type="search" id="search" name="search">
+        </li>
+        <li>
+          <label for="color">"color"</label>
+          <input type="color" id="color" name="color">
+        </li>
+        <li>
+          <label for="number">"number"</label>
+          <input type="number" id="number" name="number">
+        </li>
+        <li>
+          <label for="range">"range"</label>
+          <input type="range" id="range" name="range">
+        </li>
+        <li>
+          <label for="date">"date"</label>
+          <input type="date" id="date" name="date">
+        </li>
+        <li>
+          <label for="month">"month"</label>
+          <input type="month" id="month" name="month">
+        </li>
+        <li>
+          <label for="week">"week"</label>
+          <input type="week" id="week" name="week">
+        </li>
+        <li>
+          <label for="time">"time"</label>
+          <input type="time" id="time" name="time">
+        </li>
+        <li>
+          <label for="datetime-local">"datetime-local"</label>
+          <input type="datetime-local" id="datetime-local" name="datetime-local">
+        </li>
+        <li>
+          <label for="datetime">"datetime"</label>
+          <input type="datetime" id="datetime" name="datetime">
+        </li>
+        <li>
+          <label for="file">"file"</label>
+          <input type="file" id="file" name="file">
+        </li>
+        <li padding-bottom="1em">
+          <label for="hidden">"hidden"</label>
+          <input type="hidden" id="hidden" name="hidden">
+        </li><hr>
+  </section>
+    <!-- Attributes -->
+        <div class="table"
+        style="padding-bottom: 1em; grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 15em);">
+            
+              <div><b data-en="Other Attributes" data-th="Attributes อื่นๆ">Other Attributes</b></div>
+              <div><b data-en="Meaning" data-th="ความหมาย">Meaning</b></div>
+            
+              <div><pre><code class="language-html">value="(Variable)"</code></pre></div>
+              <div
+                data-en="Set (Variable) to default."
+                data-th="ตั้ง (Variable) เป็นค่าเริ่มต้น">
+              </div>
+            
+              <div><pre><code class="language-html"></code>min="(Variable)"</code></pre></div>
+              <div
+                data-en="Set (Variable) to minimum."
+                data-th="ตั้ง (Variable) เป็นค่าต่ําสุด">
+              </div>
+            
+              <div><pre><code class="language-html"></code>max="(Variable)"</code></pre></div>
+              <div
+                data-en="Set (Variable) to maximum."
+                data-th="ตั้ง (Variable) เป็นค่าสูงสุด">
+              </div>
+            
+              <div><pre><code class="language-hitml"></code>step="(Variable)"</code></pre></div>
+              <div
+                data-en="Adjust in (Variable) steps."
+                data-th="ปรับใน (Variable) สเต็ป">
+              </div>
+            
+              <div><pre><code class="language-html"></code>placeholder="(Text)"</code></pre></div>
+              <div
+                data-en="Shows (Text) in a form box before enters input."
+                data-th="แสดง (Text) ในช่องฟอร์มก่อนกรอกข้อมูล">
+              </td>
+            
+        </div></div><hr>
+
+    <!-- Date -->
+    <h3
+      data-en="Type of Min or Max to Date Variables"
+      data-th="ค่าของ Min หรือ Max ในวันที่">
+    </h3>
+    <div class="table" style="grid-template-rows: repeat(7, auto); grid-template-columns: repeat(2, 15em)">
+      <div><b data-en="Date Variables" data-th="วันที่"></b></div>
+      <div><b data-en="Min or Max" data-th="ค่าของ Min หรือ Max"></b></div>
+
+      <div>date</div>
+      <div><pre><code class="language-html">YYYY-MM-DD</code></pre></div>
+
+      <div>month</div>
+      <div><pre><code class="language-html">YYYY-MM</code></pre></div>
+
+      <div>week</div>
+      <div><pre><code class="language-html">YYYY-WW</code></pre></div>
+
+      <div>time</div>
+      <div><pre><code class="language-html">HH:MM:SS</code></pre></div>
+
+      <div>datetime</div>
+      <div><pre><code class="language-html">YYYY-MM-DDTHH:MM:SS</code></pre></div>
+
+      <div>datetime-local</div>
+      <div><pre><code class="language-html">YYYY-MM-DDTHH:MM:SS</code></pre></div>
+    </div>
+    <hr>
+
+    <!-- Comment -->
+    <h3 data-en="Comment box" data-th="กล่องคอมเมนต์"></h3>
+            <div>
+              <div><b data-en="Structure" data-th="โครงสร้าง"></b></div>
+              <div class="codebr"><pre><code class="language-html">&lt;label for="(Variable)"&gt;(Title)&lt;/label&gt;<br>
+  &lt;textarea id="(Variable)" name="(Variable)" rows="(row)" cols="(column)"&gt;&lt;/textarea&gt;</code></pre></div>
+            </div>
+            <div>
+              <div><b data-en="Example Input" data-th="ตัวอย่างอินพุท">Example Input</b></div>
+              <div class="codebr"><pre><code class="language-html">&lt;label for="comments"&gt;Comment box&lt;/label&gt;<br>
+  &lt;textarea id="comments" name="comments" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+              </div>
+            </div>
+            <div>
+              <div><b data-en="Example Output" data-th="ตัวอย่างเอาท์พุท">Example Output</b></div>
+              <div>
+                <label for="comments">Comment box</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+              </div>
+        </div>
+    </section>
+
+    <!-- options -->
+    <div class="white-block">
+      <h1 id="options">Options</h1>
+      <h3 class="codebr"><pre><code class="language-html">&lt;input type="(checkbox or radio)" id="option" name="option" /&gt;<br>
+  &lt;label for="option"&gt;(Text)&lt;/label&gt;<br>...(depends on the number of options)</code></pre></h3>
+
+      <!-- Newy -->
+      <div class="whino">
+        <div><h2
+          data-en='Multiple options: "checkbox"'
+          data-th='แบบหลายตัวเลือก: "checkbox"'>
+        </h2></div>
+      </div>
+        <div class="gridio">
+            <div><b data-en="Example Output:" data-th="ตัวอย่างเอาท์พุท:">Example Output:</b></div>
+            <div>
+              <input type="checkbox" id="option1" name="option" />
+              <label data-en="option 1" data-th="ตัวเลือกที่ 1" for="option1">option 1</label>
+              <input type="checkbox" id="option2" name="option" />
+              <label data-en="option 2" data-th="ตัวเลือกที่ 2" for="option2">option 2</label>
+              <input type="checkbox" id="option3" name="option" />
+              <label data-en="option 3" data-th="ตัวเลือกที่ 3" for="option3">option 3</label>
+            </div>
+            <div><b data-en="Setting Default:" data-th="ตั้งค่าเริ่มต้น:">Setting Default:</b></div>
+            <div><pre><code class="language-html">&lt;input type="checkbox" id="option" name="option" <b>checked</b>/&gt;</code></pre></div>
+        </div><br>
+
+        <div class="whino">
+          <div><h2
+            data-en='Single option: "radio"'
+            data-th='แบบตัวเลือกเดียว: "radio"'>
+          </h2></div>
+        </div>
+          <div class="gridio">
+              <div><b data-en="Example Output:" data-th="ตัวอย่างเอาท์พุท:">Example Output:</b></div>
+              <div>
+                <input type="radio" id="option1" name="option" />
+                <label data-en="option 1" data-th="ตัวเลือกที่ 1" for="option1">option 1</label>
+                <input type="radio" id="option2" name="option" />
+                <label data-en="option 2" data-th="ตัวเลือกที่ 2" for="option2">option 2</label>
+                <input type="radio" id="option3" name="option" />
+                <label data-en="option 3" data-th="ตัวเลือกที่ 3" for="option3">option 3</label>
+              </div>
+              <div><b data-en="Setting Default:" data-th="ตั้งค่าเริ่มต้น:">Setting Default:</b></div>
+              <div><pre><code class="language-html">&lt;input type="checkbox" id="option" name="option" <b>value="(Variable)"</b>/&gt;</code></pre></div>
+          </div><br>  
+      <!-- Newy -->
+
+      <div style="border-bottom: solid 1px #535c91;"></div>
+
+      <div style="display: grid; gap: 10px; grid-template-columns: auto auto auto; align-items: center">
+      <div>
+        <h4 class="codebr"><pre><code class="language-html">&lt;select id="option" name="option"&gt;<br>
+    &lt;option value="(Option)"&gt;(Text)&lt;/option&gt;<br>
+      ...(depends on the number of options)<br>
+  &lt;/select&gt;</code></pre></h4>
+      </div>
+
+      <div data-en="and" data-th="และ"></div>
+
+      <div>
+      <h4 class="codebr"><pre><code class="language-html">&lt;select id="option" name="option"&gt;<br>
+    &lt;optgroup label="(Group name)"&gt;<br>
+    &lt;option value="(Option)"&gt;(Text)&lt;/option&gt;<br>
+      ...(depends on the number of options)<br>
+    &lt;/optgroup&gt;<br>
+      ...(depends on the number of optgroups)<br>
+  &lt;/select&gt;</h4></code></pre>
+      </div>
+    </div>
+
+      <!-- Newy -->
+      <div class="whino">
+        <div><h2><div style="display:inline" data-en="Select box:" data-th="แถบตัวเลือก:">Select box:</div> &nbsp;<div style="display:inline"><pre><code class="language-html">&lt;option&gt;</code></pre></h2></div> &nbsp;&nbsp;&nbsp;
+      </div>
+        <div class="gridio">
+            <div><b data-en="Example Output:" data-th="ตัวอย่างเอาท์พุท:">Example Output:</b></div>
+            <div>
+              <select id="option" name="option">
+                <option value="option1" data-en="option 1" data-th="ตัวเลือกที่ 1">option 1</option>
+                <option value="option2" data-en="option 2" data-th="ตัวเลือกที่ 2">option 2</option>
+                <option value="option3" data-en="option 3" data-th="ตัวเลือกที่ 3">option 3</option>
+              </select>
+            </div>
+            <div><b data-en="Setting Default:" data-th="ตั้งค่าเริ่มต้น:">Setting Default:</b></div>
+            <div><pre><code class="language-html">&lt;option value="(Variable)" <b>selected</b>&gt;(Text)&lt;/option&gt;</code></pre></div>
+        </div><br>
+
+        <div class="whino">
+          <div><h2><div style="display:inline" data-en="Select box(group):" data-th="แถบตัวเลือกแบบกลุ่ม:"></div>&nbsp;<div style="display:inline"><pre><code class="language-html">&lt;optgroup&gt;</code></pre></h2></div> &nbsp;&nbsp;&nbsp;
+        </div>
+          <div class="gridio">
+              <div><b data-en="Example Output:" data-th="ตัวอย่างเอาท์พุท:">Example Output:</b></div>
+              <div>
+                <select id="option" name="option">
+                  <optgroup label="group1" id="group1">
+                    <option value="option1" data-en="option 1" data-th="ตัวเลือกที่ 1">option 1</option>
+                    <option value="option2" data-en="option 2" data-th="ตัวเลือกที่ 2">option 2</option>
+                  </optgroup>
+                  <optgroup label="group2" id="group2">
+                    <option value="option3" data-en="option 3" data-th="ตัวเลือกที่ 3">option 3</option>
+                    <option value="option4" data-en="option 4" data-th="ตัวเลือกที่ 4">option 4</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div><b data-en="Setting Default:" data-th="ตั้งค่าเริ่มต้น:">Setting Default:</b></div>
+              <div><pre><code class="language-html">&lt;option value="(Variable)" <b>selected</b>&gt;(Text)&lt;/option&gt;</code></pre></div>
+          </div>
+      <!-- Newy -->
+
+    </div>
+  </section>
+</div>
+</section>
+
+<section class="buttons">
+  <!-- languagebtn -->
+  <div>
+    <select class="sectionbtn" id="option" name="option" onchange="changeLanguage(this.value)">
+      <option value="en">ENG</option>
+      <option value="th">ไทย</option>
+    </select>
+  </div>
+
+    <!-- light theme -->
+    <div>
+      <button class="themebtn" id="theme-toggle">
+        <img class="themeicon" id="theme-icon" src="moon-icon.png" alt="Theme Icon" width="25" height="25">
+      </button>
+    </div>
+
+    <!-- ฺgo to top btn -->
+    <div>
+      <button class="gotop">
+      <img src="up-icon.png" width="25" height="25" class="uppy">
+      </button>
+    </div>
+
+</section>
+
+<section class="footer"
+  data-en="© 2025 Trithod Site. Made by Trithot Sripol."
+  data-th="© 2568 Trithod Site. จัดทำโดย ไตรทศ ศรีพล.">
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
