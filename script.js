@@ -79,6 +79,16 @@ themeToggleButton.addEventListener('click', () => {
   }
 });
 
+//--hori scroll
+const tabsList = document.querySelectorAll('.indigo-block, .white-block');
+
+tabsList.forEach(tabs => {
+  tabs.addEventListener('wheel', (e) => {
+    e.preventDefault(); 
+    tabs.scrollLeft += e.deltaY * 0.5;
+  });
+});
+
 
 
 
