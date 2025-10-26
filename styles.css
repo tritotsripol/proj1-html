@@ -58,30 +58,32 @@ h1 {
   margin:25px;
 }
 body {
-  background-color: #070F2B ;
+  background-color: #1a1d2a ;
   margin: 0;
 }
 .title-box {
   text-align: center;
   color: white;
-  background: linear-gradient(to bottom, #596bd3, #2b2983);
+  border: 1px solid #596bd3;
+  background: linear-gradient(to bottom, #2b298380, #2b298320);
   padding-top: 0.5em;
   padding-bottom: 3em;
   padding-left:10px;
   padding-right:10px;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 1em;
 }
 .contents-box {
-  background: linear-gradient(to bottom, #eeedff, #d8d6ff);
-  border-radius: 25px;
+  border: 1px solid #eeedff;
+  background: linear-gradient(to bottom, #d8d6ff80, #d8d6ff20);
+  border-radius: 15px;
   padding-top: 0.5em;
   padding-bottom: 2em;
   padding-left:10px;
   padding-right:10px;
   margin-top: 1em;
   margin-bottom: 1em;
-  color: #596bd3;
+  color: white;
 }
 .contents {
   display: flex;
@@ -92,14 +94,16 @@ body {
 }
 .contents > div > a {
   text-decoration: none;
-  color: #596bd3;
+  color: white;
   cursor: pointer;
   transition: 0.5s;
 }
 .contents > div > a:hover {
-  color: #2b2983;
   font-weight: bold;
   font-size: large;
+  background-color: #ffffff40;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
 }
 
 .dft {
@@ -112,21 +116,22 @@ body {
 /* indigo block */
 .indigo-block {
   overflow-y: auto;
-  background: linear-gradient(to bottom, #596bd3, #2b2983);
+  border: 1px solid #596bd3;
+  background: linear-gradient(to bottom, #2b298380, #2b298320);
   padding: 1em;
-  border-radius: 25px;
+  border-radius: 15px;
   color: white;
   margin-bottom: 1em;
   transition: 0.5s;
 }
 .indigo-block::-webkit-scrollbar {
-  background: rgba(255, 255, 255, 0.5);
+  background: #596bd340;
   border-radius: 25px;
   width: 15px;
   height: 15px;
 }
 .indigo-block::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.75);
+  background: #596bd3;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -136,21 +141,22 @@ body {
 /* white block */
 .white-block {
   overflow-y: auto;
-  background: linear-gradient(to bottom, #eeedff, #d8d6ff);
+  border: 1px solid #eeedff;
+  background: linear-gradient(to bottom, #d8d6ff80, #d8d6ff20);
   padding: 1em;
-  border-radius: 25px;
-  color:#596bd3;
+  border-radius: 15px;
+  color:white;
   margin-bottom: 1em;
   transition: 0.5s;
 }
 .white-block::-webkit-scrollbar {
-  background: rgba(255, 255, 255, 0.5);
+  background: #ffffff40;
   border-radius: 25px;
   width: 15px;
   height: 15px;
 }
 .white-block::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #596bd3, #2b2983);
+  background: white;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -164,12 +170,6 @@ body {
 .table > div {
   padding: 0.5em;
 }
-.bb {
-  border-bottom: 1px solid #ffffff80;
-}
-.rb {
-  border-right: 1px solid #ffffff80;
-}
 .table-l {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -178,21 +178,27 @@ body {
 .table-l > div {
   padding: 1em;
 }
+.bb {
+  border-bottom: 1px solid #ffffff40;
+}
+.rb {
+  border-right: 1px solid #ffffff40;
+}
 .bb-blue {
-  border-bottom: solid 1px #596bd380;
+  border-bottom: solid 1px #ffffff40;
 }
 hr {
   border: none;
-  border-top: solid 1px #ffffff80;
+  border-top: solid 1px #ffffff40;
 }
 .indigo-block:hover {
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px #2b298380;
+  box-shadow: 0px 0px 10px #596bd3;
 }
 
 .white-block:hover {
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px rgba(238, 237, 255, 0.5);
+  box-shadow: 0px 0px 10px rgba(238, 237, 255);
 }
 
 .column {
@@ -219,7 +225,7 @@ hr {
   gap: 10px;
 }
 .bbc {
-  border-bottom: 1px solid #596bd380;
+  border-bottom: 1px solid #ffffff40;
 }
 
 /* buttons */
@@ -241,7 +247,7 @@ hr {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #2b298380;
+  box-shadow:0 0 5px #596bd380;
   transition: background-color 1s ease, box-shadow 1s ease;
 }
 .gotop:hover {
@@ -267,7 +273,7 @@ hr {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #2b298380;
+  box-shadow:0 0 5px #596bd380;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 .sectionbtn:hover {
@@ -307,7 +313,7 @@ select.sectionbtn option {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
   border: solid 1px black;
-  box-shadow:0 0 5px #2b298380;
+  box-shadow:0 0 5px #596bd380;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 .themebtn:hover {
@@ -331,7 +337,7 @@ select.sectionbtn option {
   height: 15px;
 }
 .bodys::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: #596bd3;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -393,58 +399,78 @@ html {
 
 /* lightth */
 body.light {
-  background-color: #c2bfff;
+  background-color: #d5d3ff;
+}
+.bb {
+  border-bottom: 1px solid #2c356d40;
+}
+.rb {
+  border-right: 1px solid #2c356d40;
+}
+.bb-blue {
+  border-bottom: solid 1px #2c356d40;
+}
+hr {
+  border-top: solid 1px #2c356d40;
 }
 body.light .title-box {
-  color: white;
+  color: #2c356d;
+  border: 1px solid #687fff;
+  background: linear-gradient(to bottom, #687fff80, #687fff20);
 }
 body.light .contents-box {
-  background: linear-gradient(to bottom, #ffffff, #eeedff);
-  color: #504dff;
-}
-body.light .contents > div > a {
-  color: #504dff;
+  color: #2c356d;
+  border: 1px solid #ffffff;
+  background: linear-gradient(to bottom, #ffffff80, #ffffff20);
 }
 body.light .contents > div > a:hover {
-  color: #3b39bb;
+  background-color: #687fff40;
+}
+body.light .contents > div > a {
+  color: #2c356d;
 }
 
-
-body.light .indigo-block, body.light .title-box {
-  background: linear-gradient(to bottom, #504dff, #3b39bb);
-  color: white;
+body.light .indigo-block {
+  color: #2c356d;
+  border: 1px solid #687fff;
+  background: linear-gradient(to bottom, #687fff80, #687fff20);
 }
 body.light .indigo-block:hover {
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px #3b39bb80;
+  box-shadow: 0px 0px 10px #687fff;
+}
+.indigo-block::-webkit-scrollbar {
+  background: #687fff;
+  border-radius: 25px;
+  width: 15px;
+  height: 15px;
+}
+.indigo-block::-webkit-scrollbar-thumb {
+  background: #687fff;
+  border-radius: 25px;
+  width: 50%;
+  height: 15px;
 }
 body.light .white-block:hover {
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255);
 }
 body.light .white-block {
-  background: linear-gradient(to bottom, #ffffff, #eeedff);
-  color: #504dff;
+  color: #2c356d;
+  border: 1px solid #ffffff;
+  background: linear-gradient(to bottom, #ffffff80, #ffffff20);
 }
-body.light .white-block::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to right,
-    rgba(79, 77, 255, 0.75),
-    rgba(59, 57, 187, 0.75)
-  );
-}
-
 body.light::-webkit-scrollbar {
   background: rgba(255,255,255, 0.5);
 }
 body.light::-webkit-scrollbar-thumb {
-  background: rgba(80, 77, 255, 0.5);
+  background: #687fff80;
 }
 
 body.light .gotop, body.light .themebtn {
   background-color: rgba(255,255,255,0.5);
   border: solid 1px white;
-  box-shadow:0 0 5px rgba(80, 77, 255, 0.5);
+  box-shadow:0 0 5px #687fff80;
   transition: background-color 1s ease, box-shadow 1s ease;
 }
 body.light .gotop:hover, body.light .themebtn:hover {
@@ -458,7 +484,7 @@ body.light .uppy, body.light .themeicon {
 body.light .sectionbtn {
   background-color: rgba(255,255,255,0.5);
   border: solid 1px white;
-  box-shadow:0 0 5px rgba(80, 77, 255, 0.5);
+  box-shadow:0 0 5px #687fff80;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 body.light .sectionbtn:hover {
