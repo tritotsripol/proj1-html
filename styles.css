@@ -464,7 +464,7 @@ body.light::-webkit-scrollbar {
   background: rgba(255,255,255, 0.5);
 }
 body.light::-webkit-scrollbar-thumb {
-  background: #687fff80;
+  background: #687fff;
 }
 
 body.light .gotop, body.light .themebtn {
