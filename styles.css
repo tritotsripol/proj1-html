@@ -13,6 +13,7 @@ h1 {
   justify-content: start;
   align-items: center;
   gap: 2.5em;
+  border-radius: 0 0 25px 25px;
 }
 .home {
   flex-grow: 1;
@@ -25,20 +26,54 @@ h1 {
   transition: font-weight 0.5s ease, font-size 0.5s ease;
 }
 .home > a > button {
+  position: relative;
+  width: 75px !important;
+  height: 75px;
   cursor: pointer;
   color: white;
   background: #00000080;
   border-radius: 15px;
-  border: 1px solid black;
+  border: none;
   width: 5em;
   font-size: 20px;
   font-family: Kanit;
-  transition: background 1s ease, box-shadow 1s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 .home > a > button:hover {
   background: black;
-  box-shadow: 0 0 5px rgba(0,0,0, 1);
+}
+.home > a > button > img {
+  opacity: 50%;
+  transition: opacity 0.5s ease;
+}
+.home > a > button:hover > img {
+  opacity: 100%;
+}
+.home > a > button > div {
+  opacity: 0.5;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  mask-image: url('home-icon.png');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: white;
+  transition: opacity 0.5s ease; 
+}
+.home > a > button:hover > div {
+  opacity: 1;
+}
+.semiicon {
+  width: 75px;
+  height: 75px;
+  mask-image: url('semi-icon.png');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: white;
 }
 .footer {
   background: #00000080;
@@ -53,19 +88,21 @@ h1 {
   box-sizing: border-box;
   margin-top:auto;
   z-index: -1;
+  border-radius: 25px 25px 0 0;
 }
 .web {
   margin:25px;
 }
 body {
-  background-color: #1a1d2a ;
+  background: radial-gradient(circle at center, #2b2983 0%, transparent 75%),#1a1d2a;
+  background-size: cover;
+  height: 100vh;
   margin: 0;
 }
 .title-box {
   text-align: center;
   color: white;
-  border: 1px solid #596bd3;
-  background: linear-gradient(to bottom, #2b298380, #2b298320);
+  background: #2b298380;
   padding-top: 0.5em;
   padding-bottom: 3em;
   padding-left:10px;
@@ -74,8 +111,7 @@ body {
   margin-bottom: 1em;
 }
 .contents-box {
-  border: 1px solid #eeedff;
-  background: linear-gradient(to bottom, #d8d6ff80, #d8d6ff20);
+  background: #2f354b80;
   border-radius: 15px;
   padding-top: 0.5em;
   padding-bottom: 2em;
@@ -116,8 +152,7 @@ body {
 /* indigo block */
 .indigo-block {
   overflow-y: auto;
-  border: 1px solid #596bd3;
-  background: linear-gradient(to bottom, #2b298380, #2b298320);
+  background: #2b298380;  
   padding: 1em;
   border-radius: 15px;
   color: white;
@@ -125,7 +160,7 @@ body {
   transition: 0.5s;
 }
 .indigo-block::-webkit-scrollbar {
-  background: #596bd340;
+  background: #00000080;
   border-radius: 25px;
   width: 15px;
   height: 15px;
@@ -141,8 +176,7 @@ body {
 /* white block */
 .white-block {
   overflow-y: auto;
-  border: 1px solid #eeedff;
-  background: linear-gradient(to bottom, #d8d6ff80, #d8d6ff20);
+  background: #2f354b80;
   padding: 1em;
   border-radius: 15px;
   color:white;
@@ -150,13 +184,13 @@ body {
   transition: 0.5s;
 }
 .white-block::-webkit-scrollbar {
-  background: #ffffff40;
+  background: #00000080;
   border-radius: 25px;
   width: 15px;
   height: 15px;
 }
 .white-block::-webkit-scrollbar-thumb {
-  background: white;
+  background: #485681;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -191,15 +225,11 @@ hr {
   border: none;
   border-top: solid 1px #ffffff40;
 }
-.indigo-block:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 10px #596bd3;
+.indigo-block:hover, .white-block:hover {
+  transform: scale(1.025);
+  box-shadow: 0px 5px 5px #00000080;
 }
 
-.white-block:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 10px rgba(238, 237, 255);
-}
 
 .column {
   column-count: 2;
@@ -232,8 +262,8 @@ hr {
 .buttons {
   display: flex;
   flex-wrap: nowrap;
-  gap: 5px;
   position: fixed;
+  gap: 0px;
   inset: auto 15px 15px auto;
 }
 /* buttons */
@@ -244,22 +274,20 @@ hr {
   height: 3em;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #596bd380;
-  transition: background-color 1s ease, box-shadow 1s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 .gotop:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0, 1);
 }
 .uppy {
   filter: invert(1);
   opacity: 0.5;
 }
 .gotop:hover .uppy {
-  transition: opacity 1s ease;  
+  transition: opacity 0.5s ease;  
   opacity: 1;
 }
 /* gotop button */
@@ -270,15 +298,13 @@ hr {
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #596bd380;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .sectionbtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .sectionbtn:focus {
   outline: none;
@@ -302,7 +328,7 @@ select.sectionbtn div {
 select.sectionbtn option {
   color: white;
   font-family: 'Kanit', sans-serif;
-  background-color:#1f1f1f;
+  background-color:black;
 }
 /* sectionbtn */
 
@@ -312,32 +338,29 @@ select.sectionbtn option {
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border: solid 1px black;
-  box-shadow:0 0 5px #596bd380;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .themebtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .themeicon {
   filter: invert(1);
   opacity: 0.5;
 }
 .themebtn:hover .themeicon {
-  transition: opacity 1s ease;  
+  transition: opacity 0.5s ease;  
   opacity: 1;
 }
 /* themebtn */
 
 .bodys::-webkit-scrollbar {
-  background: rgba(0,0,0, 0.5);
-  border-radius: 25px;
+  background:#1a1d2a;
   width: 15px;
   height: 15px;
 }
 .bodys::-webkit-scrollbar-thumb {
-  background: #596bd3;
+  background: #596bd3;;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -351,7 +374,7 @@ select.sectionbtn option {
   border-radius: 25px;
 }
 .struc::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: #596bd3;
   border-radius: 25px;
 }
 
@@ -399,7 +422,7 @@ html {
 
 /* lightth */
 body.light {
-  background-color: #d5d3ff;
+  background: radial-gradient(#b9b3ff80 0%, transparent 100%),#eae8ff;
 }
 .bb {
   border-bottom: 1px solid #2c356d40;
@@ -415,13 +438,11 @@ hr {
 }
 body.light .title-box {
   color: #2c356d;
-  border: 1px solid #687fff;
-  background: linear-gradient(to bottom, #687fff80, #687fff20);
+  background: #b9b3ff80;
 }
 body.light .contents-box {
   color: #2c356d;
-  border: 1px solid #ffffff;
-  background: linear-gradient(to bottom, #ffffff80, #ffffff20);
+  background: #ffffffb0;
 }
 body.light .contents > div > a:hover {
   background-color: #687fff40;
@@ -432,50 +453,48 @@ body.light .contents > div > a {
 
 body.light .indigo-block {
   color: #2c356d;
-  border: 1px solid #687fff;
-  background: linear-gradient(to bottom, #687fff80, #687fff20);
+  background: #b9b3ff80;
 }
-body.light .indigo-block:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 10px #687fff;
+body.light .indigo-block:hover,
+body.light .white-block:hover {
+  transform: scale(1.025);
+  box-shadow: 0px 5px 5px #9788fdb0;
 }
-body.light .indigo-block::-webkit-scrollbar {
-  background: #687fff40;
+body.light .indigo-block::-webkit-scrollbar,
+body.light .white-block::-webkit-scrollbar {
+  background: #ffffff80;
   border-radius: 25px;
   width: 15px;
   height: 15px;
 }
 body.light .indigo-block::-webkit-scrollbar-thumb {
-  background: #687fff;
+  background: #9788fd;
   border-radius: 25px;
   width: 50%;
   height: 15px;
 }
-body.light .white-block:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255);
+body.light .white-block::-webkit-scrollbar-thumb {
+  background: #d5d3ff;
+  border-radius: 25px;
+  width: 50%;
+  height: 15px;
 }
 body.light .white-block {
   color: #2c356d;
-  border: 1px solid #ffffff;
-  background: linear-gradient(to bottom, #ffffff80, #ffffff20);
+  background: #ffffffb0;
 }
 body.light::-webkit-scrollbar {
-  background: #ffffff40;
+  background: #eae8ff;
 }
 body.light::-webkit-scrollbar-thumb {
-  background: #687fff;
+  background: #9788fd;
 }
 
 body.light .gotop, body.light .themebtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #687fff80;
-  transition: background-color 1s ease, box-shadow 1s ease;
 }
 body.light .gotop:hover, body.light .themebtn:hover {
   background-color: white;
-  box-shadow: 0 0 5px rgba(255,255,255, 1);
 }
 body.light .uppy, body.light .themeicon {
   filter: invert(0);
@@ -483,13 +502,9 @@ body.light .uppy, body.light .themeicon {
 }
 body.light .sectionbtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #687fff80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 body.light .sectionbtn:hover {
   background-color: white;
-  box-shadow: 0 0 5px rgba(255,255,255,1);
 }
 body.light select.sectionbtn {
   color: rgba(0,0,0,0.5);
@@ -507,22 +522,31 @@ body.light select.sectionbtn option {
 
 body.light .header, body.light .footer {
   background: #ffffff80;
-  color: #13364e;
+  color: #2c356d;
 }
 body.light .home>a {
-  color: #13364e;
+  color: #2c356d;
+}
+body.light .semiicon {
+  background-color: #2c356d;
+}
+body.light .home > a > button > div {
+  background-color: #2c356d;
 }
 body.light .home > a{
-  color: #13364e;
+  color: #2c356d;
 }
 body.light .home > a > button {
-  color: #13364e;
+  color: #2c356d;
   background: #ffffff80;
-  border: 1px solid white;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 body.light .home > a > button:hover {
   background: white;
-  box-shadow: 0 0 5px rgba(255,255,255, 1);
+}
+body.light .struc::-webkit-scrollbar-thumb {
+  background: #9788fd;
+}
+body.light .struc::-webkit-scrollbar{
+  background: #ffffff80;
 }
 /* lightth */
